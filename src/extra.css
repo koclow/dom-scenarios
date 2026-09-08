@@ -1,4 +1,6 @@
 html, body { min-width: 1280px; }
+/* Оболочка как в портале ДОМа (.portal-shell): колонка до 1560px по центру, на широких экранах — поля. */
+#app { width: min(100%, 1560px); margin: 0 auto; }
 body { min-height: 100vh; }
 .clk { cursor: pointer; }
 .ed { cursor: text; border-radius: 4px; outline: none; }

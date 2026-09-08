@@ -253,6 +253,8 @@ a { color: #4f46e5; text-decoration: none; }
 .mini .track { flex-wrap: wrap; row-gap: 6px; }
 
 html, body { min-width: 1280px; }
+/* Оболочка как в портале ДОМа (.portal-shell): колонка до 1560px по центру, на широких экранах — поля. */
+#app { width: min(100%, 1560px); margin: 0 auto; }
 body { min-height: 100vh; }
 .clk { cursor: pointer; }
 .ed { cursor: text; border-radius: 4px; outline: none; }
@@ -876,7 +878,7 @@ function modalHtml() {
 }
 function notifHtml() {
   if (!ui.notif) return '';
-  return `<div class="veil2 clk" data-act="close" style="background: transparent;"></div><div class="pop" style="position: fixed; right: 84px; top: 66px; width: 380px; z-index: 82; padding: 8px;"><div style="padding: 6px 10px 8px; font-size: 13px; font-weight: 700; color: #8c94a2; letter-spacing: 0.04em; text-transform: uppercase;">Уведомления</div>${DB.notifications.map((n) => `<div style="padding: 8px 10px; border-radius: 8px; ${n.unread ? 'background:#f4f5f7;' : ''}"><div style="font-size: 13.5px; line-height: 1.45;">${n.text}</div><div style="color:#8c94a2; font-size: 12px; margin-top: 2px;">${n.when}</div></div>`).join('')}</div>`;
+  return `<div class="veil2 clk" data-act="close" style="background: transparent;"></div><div class="pop" style="position: fixed; right: calc((100% - min(100%, 1560px)) / 2 + 84px); top: 66px; width: 380px; z-index: 82; padding: 8px;"><div style="padding: 6px 10px 8px; font-size: 13px; font-weight: 700; color: #8c94a2; letter-spacing: 0.04em; text-transform: uppercase;">Уведомления</div>${DB.notifications.map((n) => `<div style="padding: 8px 10px; border-radius: 8px; ${n.unread ? 'background:#f4f5f7;' : ''}"><div style="font-size: 13.5px; line-height: 1.45;">${n.text}</div><div style="color:#8c94a2; font-size: 12px; margin-top: 2px;">${n.when}</div></div>`).join('')}</div>`;
 }
 function searchHtml() {
   if (ui.search === null) return '';
