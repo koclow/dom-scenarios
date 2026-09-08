@@ -1,0 +1,31 @@
+html, body { min-width: 1280px; }
+body { min-height: 100vh; }
+.clk { cursor: pointer; }
+.ed { cursor: text; border-radius: 4px; outline: none; }
+.ed:focus { background: #f4f5f7; box-shadow: 0 0 0 2px #e4e2fb; }
+.pp[contenteditable]:focus, .tbody .pp:focus { outline: none; background: #fbfbfd; border-radius: 6px; box-shadow: 0 0 0 2px #e4e2fb; }
+.pp { margin: 8px 0; line-height: 1.6; }
+.pp.rem { color: #4b5563; font-style: italic; }
+.pl { margin: 6px 0 6px 20px; line-height: 1.6; }
+.pl li { margin: 3px 0; }
+.splittable { padding: 6px 10px; margin: 6px -10px; border-radius: 8px; border: 1px dashed transparent; }
+.splittable:hover { border-color: #a5b4fc; background: #f7f7ff; }
+.nbadge { position: absolute; top: 4px; right: 4px; min-width: 16px; height: 16px; padding: 0 4px; border-radius: 99px; background: #4f46e5; color: #fff; font-size: 10.5px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; }
+.veil2 { position: fixed; inset: 0; background: rgba(27, 29, 33, 0.28); z-index: 80; }
+.toast { position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 12px; background: #1b1d21; color: #fff; font-size: 13.5px; font-weight: 550; box-shadow: 0 12px 32px rgba(27,29,33,.24); z-index: 100; }
+.toast svg { color: #7ee2a8; }
+.pop { width: 224px; background: #ffffff; border: 1px solid #eef0f4; border-radius: 12px; box-shadow: 0 12px 32px rgba(27, 29, 33, 0.12), 0 2px 6px rgba(27, 29, 33, 0.06); padding: 6px; }
+.brow.clk:hover { background: #fafbfc; }
+.prow:hover { background: #f4f5f7; }
+.prow:hover .dots2.ph { visibility: visible; }
+.dots2 { visibility: visible; }
+.ti.clk:hover { background: #f4f5f7; }
+.ftab.clk:hover { color: #1b1d21; }
+.stchip.clk:hover { box-shadow: 0 0 0 3px #e4e2fb; }
+.slide.ho { border-style: dashed; }
+.slide .stit { min-width: 0; }
+.hit { cursor: pointer; }
+.sfield { display: flex; align-items: center; gap: 10px; }
+.tzbar { margin-top: 18px; }
+.tools .ibtn { cursor: pointer; }
+.pv { cursor: default; }
